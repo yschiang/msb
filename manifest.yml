@@ -1,0 +1,13 @@
+applications:
+- name: demo2
+  path: ./target/demo2.zip
+  memory: 512M
+  timeout: 180
+  instances: 1
+  buildpack: liberty-for-java
+  host: jj-msb-demo2
+  domain: mybluemix.net
+  services:
+  - demo2-Object-Storage-5395
+env:
+  services_autoconfig_excludes: Object-Storage=config
